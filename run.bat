@@ -20,6 +20,6 @@ REM 获取chrome.exe的路径
 for /f "tokens=2,*" %%a in ('reg query "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe" /ve 2^>nul') do set "chromeExe=%%b"
 
 REM 运行Chrome，并指定参数
-start "" "%chromeExe%" --user-data-dir="%currentDir%dataDir" --disable-web-security "%currentDir%index.html"
+start "" "%chromeExe%" --user-data-dir="%currentDir%dataDir" --disable-web-security --allow-running-insecure-content --start-maximized --enable-gamepad --allow-file-access-from-files "%currentDir%index.html"
 
 endlocal
